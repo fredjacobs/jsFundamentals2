@@ -204,6 +204,52 @@ console.log(jim.calcAge());
 
 console.log(jim.getSummary());
 
+// Coding Challenge 3
+
+const mark = {
+    firstName: 'Mark',
+    lastName: 'Miller',
+    mass:78,
+    height:1.69,
+    calcBMI: function(){
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+    
+}
+
+const john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    mass:92,
+    height:1.95,
+    calcBMI: function(){
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+    
+}
+
+console.log(john.calcBMI());
+console.log(mark.calcBMI());
+
+console.log(john, mark);
+
+function logResult(){
+
+    if(mark.bmi > john.bmi){
+        return `${mark.firstName} ${mark.lastName}'s BMI (${mark.bmi}) is 
+        higher than ${john.firstName} ${john.lastName}'s BMI (${john.bmi})`;
+    } else {
+        return `${john.firstName} ${john.lastName}'s BMI (${john.bmi}) is 
+        higher than ${mark.firstName} ${mark.lastName}'s BMI (${mark.bmi})`;
+    }
+}
+
+console.log(logResult());
+
+
+
 
 
 
