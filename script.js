@@ -132,7 +132,7 @@ function tipCalc(bill){
     tip =  bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
 
     tipValues.push(tip);
-    
+
     return tip + bill;;
 }
 
@@ -141,6 +141,69 @@ console.log(tipCalc(bills[1]));
 console.log(tipCalc(bills[2]));
 
 console.log(tipValues);
+
+//Objects
+
+const fredObj = {
+    name: 'Fred',
+    lastName: 'Jacobs',
+    age: 2020-1974,
+    job:'developer',
+    friends: ['James','Jim', 'Jonas'],
+    message: function(){console.log('Hello')}
+}
+
+console.log();
+fredObj.message();
+
+const info = prompt('Choose the info you want from: lastName, name, age, job and friends');
+console.log(info);
+
+if (fredObj[info]){
+
+    console.log(fredObj[info]);
+
+} else {
+
+    console.log('Wrong request');
+
+}
+
+//Add properties to object
+
+fredObj.location = 'South Africa';
+fredObj['color'] = 'Green';
+
+console.log(fredObj.location);
+
+console.log(`${fredObj.name} has ${fredObj.friends.length} 
+friends and his best friend is called ${fredObj['friends'][0]}`);
+
+
+
+const jim = {
+    name: 'Jim',
+    lastName: 'Morrison',
+    birthYear: 1974,
+    job:'developer',
+    friends: ['James','Jim', 'Jonas'],
+    calcAge: function(){
+
+        this.age = 2020 - this.birthYear;
+        return this.age;
+    },
+    hasLicense: true,
+    getSummary: function (){
+        return `${this.name} is a ${this.calcAge()} year old ${this.job} 
+        and he has ${this.hasLicense ? 'got' : 'not got'} a license`;
+    }
+}
+
+console.log(jim.calcAge());
+
+
+console.log(jim.getSummary());
+
 
 
 
