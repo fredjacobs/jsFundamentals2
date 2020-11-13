@@ -248,6 +248,67 @@ function logResult(){
 
 console.log(logResult());
 
+//LOOP
+
+for(let i = 0; i <= 10; i++){
+    console.log(`Number ${i}`);
+}
+
+
+const person = [
+    'Person',
+    'Surname',
+    2037 - 2000,
+    'developer',
+    ['John', 'Fred', 'Harry'],
+    true
+];
+
+const types = [];
+
+for(let i = 0;i < person.length;i++){
+
+    console.log(person[i]);
+
+    types.push(typeof person[i]);
+}
+
+console.log(types);
+
+const birthYears = [1990, 2000, 2020, 1974];
+const ages = [];
+
+for(let i = 0; i < birthYears.length; i++){
+
+    ages.push(2020 - birthYears[i]);
+}
+
+console.log(ages);
+
+//Continue statement
+//Break statement
+
+console.log('Only Strings');
+console.log('-------------');
+
+for(let i = 0; i < person.length; i++){
+    
+    if(typeof person[i] !== 'string') continue; //continue
+
+    console.log(person[i], typeof person[i]);
+}
+
+console.log('Exit on Number');
+console.log('-------------');
+for(let i = 0; i < person.length; i++){
+    
+    if(typeof person[i] === 'number') break; //break
+
+    console.log(person[i], typeof person[i]);
+}
+
+
+
 
 
 
