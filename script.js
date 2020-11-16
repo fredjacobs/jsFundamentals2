@@ -329,14 +329,77 @@ for(let exercise = 1; exercise < 4; exercise++){
 
 //While Loop
 
+let reps = 1;
+
+while (reps <= 10){
+
+    console.log(`${reps}`);
+
+    reps++;
+}
 
 
 
 
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice < 6){
+
+    console.log(`Dice: ${dice}`);
+
+    dice = Math.trunc(Math.random() * 6) + 1;
+
+    if( dice === 6)console.log(`Loop will now end...on ${dice}`);
+}
+
+
+//Coding Challenge 4
 
 
 
+const newBills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 
+const tips = [];
+const totals = [];
+
+
+function calcTip(bills){
+
+    for (let i = 0; i < bills.length; i++){
+
+        let tip;
+
+        tip =  tipCalc(bills[i]);
+
+        tips.push(tip);
+
+        totals.push(bills[i] + tip);
+
+   }
+
+ }
+
+calcTip(newBills);
+
+
+const calcAvg = function (arr){
+
+    let total = 0;
+
+    for(let i = 0;i < arr.length; i++){
+
+        total += arr[i];
+    }
+
+    return total / arr.length;
+
+    
+}
+
+console.log(tips, totals);
+console.log(calcAvg(newBills));
+
+console.log(calcAvg([4,6,2]));
 
 
 
