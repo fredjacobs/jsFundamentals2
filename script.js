@@ -402,6 +402,8 @@ console.log(calcAvg(newBills));
 console.log(calcAvg([4,6,2]));
 
 
+console.log(`End of Fundamentals`);
+
 
 
 
